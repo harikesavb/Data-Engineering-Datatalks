@@ -64,7 +64,7 @@ WHERE lpep_pickup_datetime >= '2025-11-01'
 Which pickup date had the longest trip (excluding ≥100mi)?
 
 **Answer:**
-2025-11-24
+2025-11-14
 
 **Work:**
 
@@ -141,6 +141,7 @@ Which workflow steps describe correct Terraform usage?
 
 **Answer:**
 terraform init → terraform apply -auto-approve → terraform destroy
+
 
 
 
