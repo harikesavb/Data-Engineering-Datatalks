@@ -79,7 +79,7 @@ LIMIT 1;
 ```
 **Output screenshot:**
 
-![image alt]()
+![image alt](https://github.com/harikesavb/Data-Engineering-Datatalks/blob/21614760f4440a9c23c73b6500e560870085fe8d/homework1_works/homework1_ss/que-4.png)
 
 ## Question 5 — Highest Total Amount Zone on Nov 18
 
@@ -104,7 +104,7 @@ LIMIT 1;
 
 **Output screenshot:**
 
-![image alt]()
+![image alt](https://github.com/harikesavb/Data-Engineering-Datatalks/blob/21614760f4440a9c23c73b6500e560870085fe8d/homework1_works/homework1_ss/que-5.png)
 
 ## Question 6 — Largest Tip Drop Zone
 
@@ -132,7 +132,7 @@ LIMIT 1;
 ```
 **Output screenshot:**
 
-![image alt]()
+![image alt](https://github.com/harikesavb/Data-Engineering-Datatalks/blob/21614760f4440a9c23c73b6500e560870085fe8d/homework1_works/homework1_ss/que-6.png)
 
 ## Question 7 — Terraform Workflow
 
@@ -141,6 +141,7 @@ Which workflow steps describe correct Terraform usage?
 
 **Answer:**
 terraform init → terraform apply -auto-approve → terraform destroy
+
 
 
 
