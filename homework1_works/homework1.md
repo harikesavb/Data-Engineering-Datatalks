@@ -17,5 +17,8 @@ What’s the version of `pip` in the image?
 docker run -it --entrypoint=bash python:3.13
 pip --version
 
+---
+
 ![iamge alt](https://github.com/harikesavb/Data-Engineering-Datatalks/blob/63e960946138cc70aa21f54558d76391122b9ed7/homework1_works/homework1_ss/que-1.png)
+
 
