@@ -16,3 +16,5 @@ What’s the version of `pip` in the image?
 ```bash
 docker run -it --entrypoint=bash python:3.13
 pip --version
+
+![iamge alt]()
