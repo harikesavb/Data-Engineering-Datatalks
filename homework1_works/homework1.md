@@ -56,9 +56,91 @@ WHERE lpep_pickup_datetime >= '2025-11-01'
 ```
 **Output screenshot:**
 
+![image alt](https://github.com/harikesavb/Data-Engineering-Datatalks/blob/1dcea27bc57a55a998404f0b23d6cc88344cf438/homework1_works/homework1_ss/que-3.png)
+
+## Question 4 — Pickup Day with Longest Trip (<100mi)
+
+**Logic:**
+Which pickup date had the longest trip (excluding ≥100mi)?
+
+**Answer:**
+2025-11-20
+
+**Work:**
+
+```sql
+SELECT DATE(lpep_pickup_datetime) AS pickup_day,
+       MAX(trip_distance) AS max_distance
+FROM green_tripdata
+WHERE trip_distance < 100
+GROUP BY pickup_day
+ORDER BY max_distance DESC
+LIMIT 1;
+```
+**Output screenshot:**
+
 ![image alt]()
 
+## Question 5 — Highest Total Amount Zone on Nov 18
 
+**Logic:**
+Find pickup zone with highest total_amount sum on Nov 18 2025.
+
+**Answer:**
+East Harlem North
+
+**Work:**
+```sql
+SELECT z."Zone",
+       SUM(g.total_amount) AS total_amount_sum
+FROM green_tripdata g
+JOIN taxi_zone_lookup z
+  ON g."PULocationID" = z."LocationID"
+WHERE DATE(lpep_pickup_datetime) = '2025-11-18'
+GROUP BY z."Zone"
+ORDER BY total_amount_sum DESC
+LIMIT 1;
+```
+
+**Output screenshot:**
+
+![image alt]()
+
+## Question 6 — Largest Tip Drop Zone
+
+**Logic:**
+For pickups in East Harlem North in Nov 2025, which drop-off zone had largest tip?
+
+**Answer:**
+JFK Airport
+
+**Work:**
+```sql
+SELECT zdo."Zone",
+       MAX(g.tip_amount) AS max_tip
+FROM green_tripdata g
+JOIN taxi_zone_lookup zpu
+  ON g."PULocationID" = zpu."LocationID"
+JOIN taxi_zone_lookup zdo
+  ON g."DOLocationID" = zdo."LocationID"
+WHERE zpu."Zone" = 'East Harlem North'
+  AND g.lpep_pickup_datetime >= '2025-11-01'
+  AND g.lpep_pickup_datetime < '2025-12-01'
+GROUP BY zdo."Zone"
+ORDER BY max_tip DESC
+LIMIT 1;
+```
+**Output screenshot:**
+
+![image alt]()
+
+## Question 7 — Terraform Workflow
+
+**Logic:**
+Which workflow steps describe correct Terraform usage?
+
+**Answer:**
+terraform init → terraform apply -auto-approve → terraform destroy
 
 
 
