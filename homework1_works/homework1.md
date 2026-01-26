@@ -43,7 +43,7 @@ Containers communicate via service names in Docker compose network; internal Pos
 Count trips in Nov 2025 where trip_distance <= 1.
 
 **Answer:**
-8,254
+8007
 
 **Work:**
 
@@ -64,7 +64,7 @@ WHERE lpep_pickup_datetime >= '2025-11-01'
 Which pickup date had the longest trip (excluding ≥100mi)?
 
 **Answer:**
-2025-11-20
+2025-11-24
 
 **Work:**
 
@@ -112,7 +112,7 @@ LIMIT 1;
 For pickups in East Harlem North in Nov 2025, which drop-off zone had largest tip?
 
 **Answer:**
-JFK Airport
+Yorkville West
 
 **Work:**
 ```sql
@@ -141,6 +141,7 @@ Which workflow steps describe correct Terraform usage?
 
 **Answer:**
 terraform init → terraform apply -auto-approve → terraform destroy
+
 
 
 
