@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data sources for NYC taxi rides"
+    database: taxi_rides_ny
+    schema: prod
+    tables:
+      - name: yellow_tripdata
+      - name: green_tripdata
+        description: Raw green taxi trip data
+        columns:
+          - name: VendorID
+            description: |
+              A code indicating the provider associated with the trip record:
+                1: Creative Mobile Technologies
+                2: VeriFone Inc.
+                3: Unknown/Other
+            data_type: integer
+            meta:
+              pii: false
+              ownership: data_team
+              importance: high
+              formatting: none
